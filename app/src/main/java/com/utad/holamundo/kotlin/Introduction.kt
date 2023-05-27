@@ -2,7 +2,7 @@ package com.utad.holamundo.kotlin
 
 import android.util.Log
 
-fun ejemploDeclaracionVariables(){
+fun ejemploDeclaracionVariables() {
 
     /*Esta variable al estar declarada con la palabra
     reservada "val", NO podrá alterar su valor */
@@ -19,16 +19,17 @@ fun ejemploTipadosExplicitos() {
     /* No obstante, se darán otras situaciones en las que sí necesitemos
         indicar el tipo de una variable. */
     val myString: String = "Esto es un texto"
-    val myChar:Char = 'a' // Los valores Char se encierran entre comillas simples
+    val myChar: Char = 'a' // Los valores Char se encierran entre comillas simples
     val myBoolean: Boolean = false
 
     // --- Números ---
     // Los números pueden dividirse en dos categorías
 
     //--- Enteros ---
-    val myInt:Int = 1
-    val myLong1 : Long = 30000000000
-    val myLong2: Long = 1L // Long. Si no se especifica el tipo, se puede añadir una L al final para indicarlo
+    val myInt: Int = 1
+    val myLong1: Long = 30000000000
+    val myLong2: Long =
+        1L // Long. Si no se especifica el tipo, se puede añadir una L al final para indicarlo
     val myByte: Byte = 1
 
     //--- De coma flotante ---
@@ -36,7 +37,7 @@ fun ejemploTipadosExplicitos() {
     val myFloat: Float = 3.1416f // Es necesario añadir una 'f' al final
 }
 
-fun ejemploTipadosInferidos(){
+fun ejemploTipadosInferidos() {
 
     // --- Tipado inferido ---
     /*
@@ -62,7 +63,8 @@ fun ejemplosDeOperadores() {
     val suma = 2 + 1 // Devuelve 3
     val resta = 2 - 1 // Devuelve 1
     val multiplicacion = 2 * 2 // Devuelve 4
-    val divisionSinDecimales = 10 / 3 // Devuelve 3. Al dividir dos Ints, se obtiene un número entero redondeado
+    val divisionSinDecimales =
+        10 / 3 // Devuelve 3. Al dividir dos Ints, se obtiene un número entero redondeado
     val divisionConDecimales = 2.0 / 3
     val restoDivision = 10 % 3 // Devuelve 1, ya que es el resto de 10 dividido por 3
 
@@ -104,11 +106,36 @@ fun ejemplosDeOperadoresLogicos() {
     //--- Operadoes lógicos ---
     val myNum = 9
     val ejemploAnd = myNum > 5 && myNum < 20 // true. Compara si ambas condiciones son verdaderas
-    val ejemploOr = myNum > 5 || myNum < 1 // true. Compara si al menos una de las dos condiciones es verdadera
+    val ejemploOr =
+        myNum > 5 || myNum < 1 // true. Compara si al menos una de las dos condiciones es verdadera
     val ejemploNegacion = !(true) // false. Invierte el valor de la condición.
 }
 
 fun ejemploDeConcatenacion() {
     val myName = "Alicia"
     val greeting = "Hola, me llamo $myName" // Hola, me llamo Alicia
+}
+
+fun ejemploNulabilidad() {
+
+    // --- BIEN ---
+    // Al poner '?' al final del tipo, indicamos que la variable puede ser nula.
+    var myNullableName: String? = null
+    myNullableName = "Juan"
+    myNullableName = null
+
+    /* Si queremos usarla para un valor no nulo,debemos
+        comprobar previamente que no sea nula previamente.
+    */
+    var myName: String = "María"
+    if (myNullableName != null) {
+        myName = myNullableName
+    }
+
+    //--- MAL ---
+    myName = myNullableName  // Error, no estamos comprobando que no sea nulo
+
+    // NO podemos asignar un valor nulo a una variable que no tenga '?' al final del tipo
+    var myNickOK: String? = null // Correcto
+    var myNickMAL: String = null // Error
 }
