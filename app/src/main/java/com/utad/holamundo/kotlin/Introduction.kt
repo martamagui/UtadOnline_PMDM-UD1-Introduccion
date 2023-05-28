@@ -133,9 +133,9 @@ fun ejemploNulabilidad() {
     }
 
     //--- MAL ---
-    myName = myNullableName  // Error, no estamos comprobando que no sea nulo
+    //myName = myNullableName  // Error, no estamos comprobando que no sea nulo
 
     // NO podemos asignar un valor nulo a una variable que no tenga '?' al final del tipo
     var myNickOK: String? = null // Correcto
-    var myNickMAL: String = null // Error
+    //var myNickMAL: String = null // Error
 }

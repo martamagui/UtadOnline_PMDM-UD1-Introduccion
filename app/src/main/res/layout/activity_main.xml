@@ -6,13 +6,123 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <ImageView
+        android:id="@+id/iv_exit"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_close" />
+
+    <ImageView
+        android:id="@+id/iv_instagram_logo"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginEnd="72dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.29000002"
+        app:srcCompat="@drawable/ic_instagram_logo" />
+
+    <EditText
+        android:id="@+id/et_email"
+        style="@style/Widget.Material3.AutoCompleteTextView.FilledBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/bg_edit_text"
+        android:ems="10"
+        android:hint="Phone number, username or email"
+        android:inputType="textEmailAddress"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_instagram_logo" />
+
+    <EditText
+        android:id="@+id/et_password"
+        style="@style/Widget.Material3.AutoCompleteTextView.FilledBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_edit_text"
+        android:drawableEnd="@drawable/ic_visibility"
+        android:drawableTint="#A3A3A3"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/et_email"
+        app:layout_constraintStart_toStartOf="@+id/et_email"
+        app:layout_constraintTop_toBottomOf="@+id/et_email" />
+
+    <TextView
+        android:id="@+id/tv_forgot_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Forgot password?"
+        android:textAlignment="textEnd"
+        android:textColor="#2196F3"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/et_password"
+        app:layout_constraintStart_toStartOf="@+id/et_password"
+        app:layout_constraintTop_toBottomOf="@+id/et_password" />
+
+    <Button
+        android:id="@+id/btn_log_in"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#2196F3"
+        android:text="Log in"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_forgot_password"
+        app:layout_constraintStart_toStartOf="@+id/tv_forgot_password"
+        app:layout_constraintTop_toBottomOf="@+id/tv_forgot_password" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="1dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/btn_log_in"
+        app:layout_constraintStart_toStartOf="@+id/btn_log_in"
+        app:layout_constraintTop_toBottomOf="@+id/btn_log_in">
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:layout_weight="1"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:id="@+id/tv_or"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:text="OR"
+            android:textColor="#A2A2A2" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:layout_weight="1"
+            android:background="?android:attr/listDivider" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
