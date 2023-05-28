@@ -12,7 +12,7 @@
         android:layout_height="36dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
-        android:contentDescription="Salir de la vista"
+        android:contentDescription="@string/icon_exit_description"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_close" />
@@ -23,7 +23,7 @@
         android:layout_height="80dp"
         android:layout_marginStart="72dp"
         android:layout_marginEnd="72dp"
-        android:contentDescription="Icono de instagram"
+        android:contentDescription="@string/instagram_icon_description"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,13 +41,14 @@
         android:layout_marginEnd="32dp"
         android:background="@drawable/bg_edit_text"
         android:ems="10"
-        android:hint="Phone number, username or email"
+        android:hint="@string/edit_text_mail_hint"
         android:inputType="textEmailAddress"
         android:paddingTop="14dp"
         android:paddingBottom="14dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_instagram_logo" />
+        app:layout_constraintTop_toBottomOf="@+id/iv_instagram_logo"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/et_password"
@@ -59,7 +60,7 @@
         android:drawableEnd="@drawable/ic_visibility"
         android:drawableTint="#A3A3A3"
         android:ems="10"
-        android:hint="Password"
+        android:hint="@string/edit_text_password"
         android:inputType="textPassword"
         android:paddingTop="14dp"
         android:paddingBottom="14dp"
@@ -72,7 +73,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Forgot password?"
+        android:text="@string/text_forgot_password"
         android:textAlignment="textEnd"
         android:textColor="#2196F3"
         android:textStyle="bold"
@@ -86,14 +87,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:backgroundTint="#2196F3"
-        android:text="Log in"
+        android:text="@string/button_log_in"
         app:cornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="@+id/tv_forgot_password"
         app:layout_constraintStart_toStartOf="@+id/tv_forgot_password"
         app:layout_constraintTop_toBottomOf="@+id/tv_forgot_password" />
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
+        android:id="@+id/ll_or"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -117,7 +118,7 @@
             android:layout_height="wrap_content"
             android:paddingStart="12dp"
             android:paddingEnd="12dp"
-            android:text="OR"
+            android:text="@string/text_or"
             android:textColor="#A2A2A2" />
 
         <View
@@ -139,21 +140,22 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+        app:layout_constraintTop_toBottomOf="@+id/ll_or">
 
         <ImageView
             android:id="@+id/iv_logo_facebook"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginEnd="8dp"
-            app:tint="#2196F3"
-            app:srcCompat="@drawable/ic_fb_logo" />
+            android:contentDescription="@string/facebook_icon_content_description"
+            app:srcCompat="@drawable/ic_fb_logo"
+            app:tint="#2196F3" />
 
         <TextView
             android:id="@+id/tv_continue_with_facebook"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Continue as Dave Johnson"
+            android:text="@string/text_continue_with_faccebook"
             android:textColor="#2196F3"
             android:textStyle="bold" />
     </LinearLayout>
@@ -175,14 +177,14 @@
             android:id="@+id/tv_dont_have_an_account"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Don't have an account?" />
+            android:text="@string/text_dont_you_have_an_account" />
 
         <TextView
             android:id="@+id/tv_sign_up"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:text="Sign Up."
+            android:text="@string/text_sign_up"
             android:textColor="#2196F3"
             android:textStyle="bold" />
     </LinearLayout>
