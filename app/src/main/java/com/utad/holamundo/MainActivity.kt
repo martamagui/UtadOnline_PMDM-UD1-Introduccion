@@ -1,13 +1,8 @@
 package com.utad.holamundo
 
-import android.graphics.Color
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.utad.holamundo.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -23,10 +18,21 @@ class MainActivity : AppCompatActivity() {
         deben hacerse SIEMPRE DESPUÉS DEL "setContentView()".
         Si no, dará error.
          */
-        binding.ivExit.setImageResource(R.drawable.ic_fb_logo)
-        binding.etEmail.setText("mimail@live.u-tad.com")
-        binding.ivInstagramLogo.alpha = 0.5f
-        binding.btnLogIn.setBackgroundColor(Color.RED)
+
+        binding.btnLogIn.setOnClickListener {
+            // Recogemos los textos con".text"  y eliminamos los espacios con ".trim()"
+            val email: String = binding.etEmail.text.toString().trim()
+            val password: String = binding.etPassword.text.toString().trim()
+
+            if (email.isEmpty() == false || password.isEmpty() == false) {
+                Toast.makeText(this, "Has hecho login", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this, "Rellena todos los campos", Toast.LENGTH_SHORT).show()
+            }
+
+        }
+
+
     }
 }
 
