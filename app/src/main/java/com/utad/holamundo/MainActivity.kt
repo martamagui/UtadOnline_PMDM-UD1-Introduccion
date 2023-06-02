@@ -18,7 +18,54 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        /*
+        Todos los cambios que hagamos en la vista
+        deben hacerse SIEMPRE DESPUÉS DEL "setContentView()".
+        Si no, dará error.
+         */
+        binding.ivExit.setImageResource(R.drawable.ic_fb_logo)
+        binding.etEmail.setText("mimail@live.u-tad.com")
+        binding.ivInstagramLogo.alpha = 0.5f
+        binding.btnLogIn.setBackgroundColor(Color.RED)
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
