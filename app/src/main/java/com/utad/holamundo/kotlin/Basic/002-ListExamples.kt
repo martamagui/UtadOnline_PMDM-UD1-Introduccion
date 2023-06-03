@@ -1,6 +1,6 @@
 package com.utad.holamundo.kotlin.Basic
 
-fun myListExamples() {
+fun main() {
     //--- Declaración de una lista NO mutable ---
     val readOnly: List<String> = listOf("Pizza", "Hamburguesa", "Ensalada", "Sushi")
     println("Lista NO mutable, solo de lectura: $readOnly")

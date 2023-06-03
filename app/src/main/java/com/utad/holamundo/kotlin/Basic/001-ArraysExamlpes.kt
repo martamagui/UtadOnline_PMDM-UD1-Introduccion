@@ -1,6 +1,6 @@
 package com.utad.holamundo.kotlin.Basic
 
-fun myArrayExamples() {
+fun main() {
     //--- Formas básicas de declara un Array ---
     val animals = arrayOf("Perro", "Gato", "Pez") //Tipo Array<String> inferido
     val pets = arrayOf<String>("Hámster", "Conejo", "Canario")
