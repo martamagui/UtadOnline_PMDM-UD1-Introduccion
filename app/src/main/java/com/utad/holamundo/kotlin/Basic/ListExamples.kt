@@ -22,6 +22,7 @@ fun myListExamples() {
     println("Añado un poste: $mutableList")
 
     mutableList.set(0, "Pescadito frito") // Cambia el valor en la posición 0
+    mutableList[2] = "Patatas" // Cambia el valor en la posición 2
     mutableList.add("Pescadito frito") // Añado más pescadito frito al final
     println("Cambio tacos por pescadito frito y añado otro extra: $mutableList")
 
@@ -35,4 +36,32 @@ fun myListExamples() {
     // Elimina todas las apariciones de los elementos indicados en la lista -> [Sopa, Postre]
     mutableList.removeAll(listOf("Tacos", "Pasta"))
     println("Borro todos los tacos y pasta de la carta: $mutableList")
+
+    //--- ITERACIÓN ---
+    val menu: List<String> = listOf("Pizza", "Hamburguesa", "Ensalada", "Sushi")
+    // Opción 1 y 2 igual que en los Arrays
+    for (index in menu.indices) {
+        println("Plato: ${menu.get(index)}")
+    }
+    for (meal in menu) {
+        println(meal)
+    }
+    // Opción 3, cada iteración saca tanto el índice cómo el valor de la lista menu
+    for ((index, meal) in menu.withIndex()) {
+        println("Índice del menú: $index, Comida: $meal")
+    }
+    // Opción 4-> ForEach, recorre cada elemento de la lista
+    menu.forEach { meal ->
+        println(meal)
+    }
+
+    //Otras funciones de iteración:
+
+    val menuInCapitalLetters: List<String> = menu.map { meal -> meal.toUpperCase() }
+    /* map, crea una nueva lista a partir de los valores de la que lee ->
+     	[PIZZA, HAMBURGUESA, ENSALADA, SUSHI] */
+
+    val menuFiltered: List<String> = menu.filter { comida -> comida.startsWith("P") }
+    /* filter, filtra los elementos según una condición especificada en
+     una función lambda -> [Pizza] */
 }
