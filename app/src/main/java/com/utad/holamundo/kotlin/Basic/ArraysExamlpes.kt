@@ -1,4 +1,4 @@
-package com.utad.holamundo.kotlin
+package com.utad.holamundo.kotlin.Basic
 
 fun myArrayExamples() {
     //--- Formas básicas de declara un Array ---
@@ -14,24 +14,24 @@ fun myArrayExamples() {
     //--- Recoger el valor de una posición del Array ---
     val myPet: String = animals[0] // -> "Perro"
     val yourPet: String = animals.get(2) // -> "Gato"
-    
+
     //--- Actualizar el valor de una posición del Array ---
     animals.set(0, "Loro") // "Perro" pasa a ser "Loro"
 
     //--- Iterar un Array ---
-    // Opción 1 -> Recorrer el array por posiciones.
-    // Recorre cada "index" dentro de todos los índices que contiene "pets"
+    // Opción 1 -> Recorrer el Array por posiciones.
+    // Recorre cada "index" dentro de todos los índices que contenga "pets"
     for (index in pets.indices) {
-        println(pets[index])
+        println(pets.get(index))
     }
 
-    // Opción 2 -> Recorrer por elementos accediendo directamente al contenido
-    // Recorre cada "pet" dentro de todos los "pets"
+    // Opción 2 -> Recorrer por items accediendo directamente al contenido
+    // Recorre cada "pet" dentro de todas "pets"
     for (pet in pets) {
         println(pet)
     }
 
-    // Opción 3 -> forEach
+    // Opción 2 -> Foreach
     pets.forEach { pet ->
         println(pet)
     }
