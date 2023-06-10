@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity">
+
+    <Button
+        android:id="@+id/btn_sign_up"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#2196F3"
+        android:text="@string/button_log_in"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/et_user_description"
+        app:layout_constraintStart_toStartOf="@+id/et_user_description"
+        app:layout_constraintTop_toBottomOf="@+id/et_user_description" />
+
+    <TextView
+        android:id="@+id/tv_sign_up_step_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="64dp"
+        android:text="@string/sign_up_title"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_sign_up_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/sign_up_description"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/tv_sign_up_step_title"
+        app:layout_constraintStart_toStartOf="@+id/tv_sign_up_step_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sign_up_step_title" />
+
+    <EditText
+        android:id="@+id/et_password"
+        style="@style/Widget.Material3.AutoCompleteTextView.FilledBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/bg_edit_text"
+        android:drawableEnd="@drawable/ic_visibility"
+        android:drawableTint="#A3A3A3"
+        android:ems="10"
+        android:hint="@string/edit_text_password"
+        android:inputType="textPassword"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        app:layout_constraintEnd_toEndOf="@+id/et_user_name"
+        app:layout_constraintStart_toStartOf="@+id/et_user_name"
+        app:layout_constraintTop_toBottomOf="@+id/et_user_name" />
+
+    <EditText
+        android:id="@+id/et_user_name"
+        style="@style/Widget.Material3.AutoCompleteTextView.FilledBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:autofillHints=""
+        android:background="@drawable/bg_edit_text"
+        android:drawableEnd="@drawable/ic_close"
+        android:drawableTint="#6A5F5F"
+        android:ems="10"
+        android:hint="@string/sign_up_username_hint"
+        android:inputType="text|textPersonName|textAutoComplete"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sign_up_description" />
+
+    <EditText
+        android:id="@+id/et_user_description"
+        style="@style/Widget.Material3.AutoCompleteTextView.FilledBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:autofillHints=""
+        android:background="@drawable/bg_edit_text"
+        android:drawableEnd="@drawable/ic_close"
+        android:drawableTint="#6A5F5F"
+        android:ems="10"
+        android:hint="@string/sign_up_username_hint"
+        android:inputType="text|textPersonName|textAutoComplete"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        app:layout_constraintEnd_toEndOf="@+id/et_password"
+        app:layout_constraintStart_toStartOf="@+id/et_password"
+        app:layout_constraintTop_toBottomOf="@+id/et_password" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,4 +11,10 @@
     <string name="text_continue_with_faccebook">Continue as Dave Johnson</string>
     <string name="text_sign_up">Sign Up.</string>
     <string name="text_dont_you_have_an_account">Don\'t have an account?</string>
+    <string name="sign_up_title">Choose a user name and password</string>
+    <string name="sign_up_description">You can change it later.</string>
+    <string name="sign_up_error_message">Usernames can only contain letters, numbers, under scores and dots.</string>
+    <string name="sign_up_username_hint">User name</string>
+    <string name="sign_up_user_description_hint">Describe yourself in one sentence.</string>
+    <string name="sign_up_button">Create account</string>
 </resources>
