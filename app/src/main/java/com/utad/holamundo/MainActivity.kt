@@ -38,6 +38,8 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
+
+        binding.tvSignUp.setOnClickListener { navigateToSignUp() }
     }
 
     private fun navigateToSignUp() {
