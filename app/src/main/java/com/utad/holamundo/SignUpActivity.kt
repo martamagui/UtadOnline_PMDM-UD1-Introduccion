@@ -28,11 +28,9 @@ class SignUpActivity : AppCompatActivity() {
         passwordValue: String,
         descriptionValue: String
     ) {
+        val user: User = User(userNameValue, passwordValue, descriptionValue)
         val intent: Intent = Intent(this, ProfileActivity::class.java)
-        intent.putExtra("username", userNameValue)
-        intent.putExtra("password", passwordValue)
-        intent.putExtra("description", descriptionValue)
-
+        intent.putExtra("user", user)
         startActivity(intent)
     }
 
