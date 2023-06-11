@@ -1,10 +1,10 @@
 package com.utad.holamundo
 
-import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import com.bumptech.glide.Glide
 import com.utad.holamundo.databinding.ActivityProfileBinding
 
 class ProfileActivity : AppCompatActivity() {
@@ -31,6 +31,18 @@ class ProfileActivity : AppCompatActivity() {
             binding.tvUserNameSmall.text = user?.userName
             binding.tvUserDescription.text = user?.description
         }
+
+        val avatarUrl = "https://static.wikia.nocookie.net/meme/images/5/52/Polite_Cat-0.jpg/revision/latest?cb=20200611120017"
+
+        Glide
+            .with(this)
+            .load(avatarUrl)
+            .error(com.google.android.material.R.drawable.mtrl_ic_error)
+            .placeholder(R.drawable.ic_instagram_logo)
+            .circleCrop()
+            .into(binding.ivAvatar)
+
+
 
     }
 }

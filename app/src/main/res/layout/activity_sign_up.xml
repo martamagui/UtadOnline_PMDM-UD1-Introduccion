@@ -95,7 +95,7 @@
         android:drawableTint="#6A5F5F"
         android:ems="10"
         android:hint="@string/sign_up_user_description_hint"
-        android:inputType="text|textPersonName|textAutoComplete"
+        android:inputType="text|textMultiLine|textAutoComplete"
         android:paddingTop="14dp"
         android:paddingBottom="14dp"
         app:layout_constraintEnd_toEndOf="@+id/et_password"

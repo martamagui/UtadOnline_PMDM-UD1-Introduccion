@@ -19,7 +19,9 @@ class SignUpActivity : AppCompatActivity() {
             val username: String = binding.etUserName.text.toString()
             val password: String = binding.etPassword.text.toString()
             val description: String = binding.etUserDescription.text.toString()
-            navigateToProfile(username, password, description)
+            if (username.isNotEmpty() && password.isNotEmpty() && description.isNotEmpty()) {
+                navigateToProfile(username, password, description)
+            }
         }
     }
 
