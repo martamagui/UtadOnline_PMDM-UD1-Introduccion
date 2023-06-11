@@ -17,6 +17,7 @@ class ProfileActivity : AppCompatActivity() {
 
         if (intent.hasExtra("user")) {
             var user: User? = null
+
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
                 user = intent.getParcelableExtra<User>("user", User::class.java)
             } else {
@@ -26,6 +27,9 @@ class ProfileActivity : AppCompatActivity() {
                 "ProfileAct.",
                 "userName: ${user?.userName}, password: ${user?.password}, description: ${user?.description}"
             )
+            binding.tvUserName.text = user?.userName
+            binding.tvUserNameSmall.text = user?.userName
+            binding.tvUserDescription.text = user?.description
         }
 
     }

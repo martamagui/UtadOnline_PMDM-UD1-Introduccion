@@ -17,4 +17,12 @@
     <string name="sign_up_username_hint">User name</string>
     <string name="sign_up_user_description_hint">Describe yourself in one sentence.</string>
     <string name="sign_up_button">Create account</string>
+    <string name="profile_amount">0</string>
+    <string name="profile_post_title">Posts</string>
+    <string name="profile_followers_title">Followers</string>
+    <string name="profile_following">Following</string>
+    <string name="profile_description_dummy">This is a description 😊😎</string>
+    <string name="profile_edit_btn">Edit profile</string>
+    <string name="profile_share_btn">Share profile</string>
+    <string name="profile_no_post">You don\'t have any post.</string>
 </resources>

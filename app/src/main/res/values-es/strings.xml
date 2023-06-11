@@ -17,4 +17,12 @@
     <string name="sign_up_username_hint">Nombre de usuario</string>
     <string name="sign_up_user_description_hint">Descríbete en una frase.</string>
     <string name="sign_up_button">Crear cuenta</string>
+    <string name="profile_amount">0</string>
+    <string name="profile_post_title">Publicaciones</string>
+    <string name="profile_followers_title">Seguidores</string>
+    <string name="profile_following">Siguiendo</string>
+    <string name="profile_description_dummy">This is a description 😊😎</string>
+    <string name="profile_edit_btn">Editar perfil</string>
+    <string name="profile_share_btn">Compartir perfil</string>
+    <string name="profile_no_post">Aún no tienes ninguna publicación.</string>
 </resources>
