@@ -94,7 +94,7 @@
         android:drawableEnd="@drawable/ic_close"
         android:drawableTint="#6A5F5F"
         android:ems="10"
-        android:hint="@string/sign_up_username_hint"
+        android:hint="@string/sign_up_user_description_hint"
         android:inputType="text|textPersonName|textAutoComplete"
         android:paddingTop="14dp"
         android:paddingBottom="14dp"

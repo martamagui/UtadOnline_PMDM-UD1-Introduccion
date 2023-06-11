@@ -15,6 +15,6 @@
     <string name="sign_up_description">Puedes cambiarlo más tarde.</string>
     <string name="sign_up_error_message">Los nombres de usuario sólo pueden contener letras, números, guiones bajos y puntos.</string>
     <string name="sign_up_username_hint">Nombre de usuario</string>
-    <string name="sign_up_user_description_hint">Describete en unas frase.</string>
+    <string name="sign_up_user_description_hint">Descríbete en una frase.</string>
     <string name="sign_up_button">Crear cuenta</string>
 </resources>
